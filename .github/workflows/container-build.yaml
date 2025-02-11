@@ -32,7 +32,7 @@ jobs:
       # Get the date to apply to image tag
       - name: Get current date
         id: date
-        run: echo "date=$(date +'%Y-%m-%d.%H')" >> $GITHUB_OUTPUT
+        run: echo "date=$(date +'%Y-%m-%d.%H.%M')" >> $GITHUB_OUTPUT
       # Build and push the image
       - name: Build and push image
         uses: docker/build-push-action@v4
