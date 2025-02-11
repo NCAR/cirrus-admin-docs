@@ -1,0 +1,5 @@
+# Add User to Stratus
+
+In order to properly add a user to Stratus there are a few different steps. 
+
+First use this [link to Login to the Stratus Web UI](https://stratus-admin.ucar.edu:10443/asview) with your Access ID and Secret Key. Once logged in chose the Users tab from the Object Storage element. There is a blue box at the top right for `Add User`. Select this and enter the Users name, or username, and their email. They have now been added to the list of approved users. Next to the new entry, on the far right, is a Key icon to generate an Access Key. Click this and the user will be emailed their Access ID and Secret Key. The last step that is required is to add them to the cisl-cloud-users bucket, and any other buckets they may need access to. Navigate back to the Buckets tab, select the cisl-cloud-users link under the Bucket Name, and select User Permissions from the secondary tab menu. Select the `Grant` button, search for the users email address, check the box next to their name, select all 4 permissions boxes, and hit Grant to add them to the bucket.  

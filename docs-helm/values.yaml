@@ -1,0 +1,15 @@
+replicaCount: 1
+
+webapp:
+  name: cirrus-admin-docs
+  group: cirrus-admin-docs
+  path: /
+  tls:
+    fqdn: cirrus-admin-docs.k8s.ucar.edu
+    secretName: incommon-cert-cirrus-admin-docs
+  container: 
+    imagePullPolicy: Always
+    port: 80
+    memory: 1G
+    cpu: 2    
+    image: hub.k8s.ucar.edu/docker/cislcloudpilot/admin-docs:2024-06-04.17.19
