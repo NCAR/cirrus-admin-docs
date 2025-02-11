@@ -9,7 +9,7 @@ webapp:
     secretName: incommon-cert-cirrus-admin-docs
   container: 
     imagePullPolicy: Always
-    port: 80
+    port: 8000
     memory: 1G
     cpu: 2    
     image: hub.k8s.ucar.edu/docker/cislcloudpilot/admin-docs:2025-02-11.22
