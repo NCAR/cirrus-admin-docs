@@ -9,6 +9,7 @@ on:
   push:
     paths:
       - docs/**
+      - Dockerfile
 
 # Define the actions that are going to take place as part of this workflow    
 jobs:
