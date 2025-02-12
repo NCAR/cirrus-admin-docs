@@ -64,3 +64,7 @@
             slas.md # SLAs as defined by the CIRRUS team
         index.md  # The documentation homepage.
         
+
+## GitHub Actions
+
+There is a GitHub Actions workflow associated with this directory that will build a new container image and push it to Docker Hub when changes are made to the docs/ directory or the Dockerfile. That new container image can then be used in the values.yaml file found in the docs-helm/ directory. Once the new image tag is provided to the values.yaml and those changes are pushed the live website, [https://cirrus-admin-docs.k8s.ucar.edu/](https://cirrus-admin-docs.k8s.ucar.edu/), will be updated automatically in 3 minutes or less by Argo CD.   

@@ -1,5 +1,5 @@
 site_name: CIRRUS Admin Documentation
-site_url: https://jira.ucar.edu/secure/RapidBoard.jspa?rapidView=220&projectKey=CCPP
+site_url: https://cirrus-admin-docs.k8s.ucar.edu/
 site_description: Documentation for CIRRUS Admins
 repo_url: https://github.com/NCAR/cirrus-admin-docs/tree/main/docs
 nav:
@@ -13,7 +13,9 @@ nav:
       - Argo CD:
         - Deploy Applications: how-to/argocd/deploy.md
         - Update Applications: how-to/argocd/update.md
-      - Documentation Site Build: how-to/docs/build-docs.md
+      - Documentation:
+        - Build: how-to/docs/build-docs.md
+        - Contribute: how-to/docs/contribute.md 
       - Encryption: how-to/encryption/sops-age.md
       - GitHub Actions:
         - Setup GitHub Action to Build and Push Docker Image: how-to/GitHub/gha-docker-build.md
