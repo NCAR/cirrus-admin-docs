@@ -1,0 +1,24 @@
+name: cirrus deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send deployment message
+        uses: peter-evans/repository-dispatch@v3
+        with: 
+          token: ${{ secrets.cirrusdeployPAT }}
+          repository: NCAR/cirrus-deploy
+          event-type: commit
+          client-payload: |- 
+            {
+              "repository": "${{ github.repository }}",
+              "ref": "${{ github.ref }}",
+              "sha": "${{ github.sha }}",
+              "argoApp": "cirrusadmindocs"
+            }
